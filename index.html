@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MY PORTFLOIO</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<style>
+    
+@import 'utilities.css';
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+    --secondary:#070606;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+}
+header{
+    background: var(--dark);
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+}
+.container{
+    max-width:1152px;
+    padding:0 15px;
+    margin:0 auto;
+}
+/* nav bar*/
+header nav .left a{
+    color:var(--pure);
+    text-decoration: none;
+    margin-right:2rem;
+    text-transform:uppercase;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+header nav .left a:hover{
+    color:var(--primary);
+}
+header nav {
+    padding:2rem 0;
+}
+header nav .branding{
+    margin-right:3rem;
+}
+.hero{
+    padding:3rem 0;
+}
+.hero .left img{
+    width:400px;
+}
+.hero .right{
+    color:var(--pure);
+}
+.hero .right h6{
+    font-size:1.6rem;
+    color:var(--primary);
+    margin-bottom:0.5rem;
+}
+.hero .right h1{
+    font-size:4rem;
+    font-weight:100;
+    line-height:1.2;
+    margin-bottom:2rem;
+}
+.hero .right h1 span{
+    color:var(--primary);
+}
+.hero .right p{
+    line-height:1.9;
+    margin-bottom:2rem;
+}
+.hero .right {
+    margin-top:-7rem;
+}
+
+section{
+    padding:6rem 0;
+}
+/* about*/
+section.about .about-me-img{
+    height:450px;
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size:1.6rem;
+    font-weight:400;
+}
+section.about h1 span{
+    color:var(--primary);
+}
+section.about h3{
+    font-size: 1rem;
+    margin-bottom:1rem;
+    font-weight: 400;
+}
+
+section.about p{
+    font-family:'Lato', sans-serif;
+    color:var(--ternary);
+    line-height: 1.8;
+    margin-bottom:2rem;
+}
+section.about .social{
+    display:flex;
+}
+section.about .social i{
+    background:var(--light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    margin-right:0.6rem;
+    transition: all .3s ease;
+}
+section.about .social i:hover{
+    background:var(--primary);
+}
+section.about .social i img{
+    width:100%;
+    height:100%;
+    padding:0.5rem;
+}
+
+.section-heading{
+   color:var(--secondary); 
+   text-align: center;
+   margin-bottom:1rem;
+   line-height: 0.5;
+}
+.section-heading span{
+    color:var(--primary);
+}
+.section-heading + p{
+   color:var(--ternary);
+   font-family:'Lato', sans-serif;
+   margin-bottom:8rem;
+    text-align: center;
+}
+/* services*/
+section.services{
+    background:var(--light);
+}
+section.services .card-wrapper{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:2rem;
+    grid-row-gap:6rem;
+}
+section.services .card-wrapper .card{
+    background:var(--pure);
+    padding: 3rem 2rem;
+    position:relative;
+    padding-top:5rem;
+    text-align: center;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+section.services .card-wrapper .card img{
+    position: absolute;
+    top:-3.5rem;
+    left:50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+section.services .card-wrapper .card h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom:0.5rem;
+}
+section.services .card-wrapper .card p{
+    font-family: 'Lato', sans-serif;
+    color:var(--ternary);
+    line-height:1.6;
+}
+
+section.services .card-wrapper .card:hover{
+    background: var(--dark);  
+}
+section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
+    color:var(--pure);
+}
+/* freelancer*/
+section.freelancer{
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+    color:var(--pure);
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
+    padding-bottom:14rem;
+}
+section.freelancer h1{
+    font-size:3rem;
+    margin-bottom:0.5rem;
+}
+section.freelancer p{
+    font-size:1.3rem;
+    margin-bottom: 2rem;
+    font-family:'Lato', sans-serif;
+}
+/* work*/
+section.work{
+    background:var(--light);
+}
+section.work .card-wrapper{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:2rem;
+}
+section.work .card-wrapper .card{
+    position:relative;
+    height:250px;
+
+}
+section.work .card-wrapper .card .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(61, 207, 211,0.9);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    color:var(--light);
+    opacity:0;
+    transition:all .3s ease;
+
+   
+}
+section.work .card-wrapper .card:hover .overlay{
+    opacity:1;
+}
+
+section.work .card-wrapper .card .overlay a{
+    color:var(--secondary);
+    text-decoration: none;
+}
+section.work .card-wrapper .card img{
+    height:100%;
+    width:100%;
+}
+/* blog*/
+section.blog{
+    background:var(--dark);
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+    padding-bottom:12rem;
+}
+section.blog .section-heading{
+    color:var(--pure);
+}
+section.blog .card-wrapper{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:3rem;
+}
+section.blog .card-wrapper .card{
+    background:var(--pure);
+}
+section.blog .card-wrapper .card .img-wrapper img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+section.blog .card-wrapper .card .card-content{
+    padding:1rem;
+    padding-left:2rem;
+    padding-right:2rem;
+}
+section.blog .card-wrapper .card .card-content h1{
+    font-size:1rem;
+    font-weight:600;
+}
+section.blog .card-wrapper .card .card-content a{
+    color:var(--secondary);
+    text-decoration: none;
+}
+section.blog .card-wrapper .card .card-content a:hover{
+    color:var(--primary);
+}
+section.blog .card-wrapper .card .card-content span{
+   color:var(--ternary);
+   font-size:0.8rem; 
+}
+section.blog .card-wrapper .card .card-content p{
+    font-family:'Lato', sans-serif;
+    color:var(--ternary);
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+section.blog .card-wrapper .card .card-content a.read-more{
+    font-size:0.8rem;
+}
+/* contact*/
+section.contact .card-wrapper{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:3rem;
+}
+section.contact .card-wrapper .card{
+    text-align: center;
+}
+section.contact .card-wrapper .card img{
+    margin-bottom: 3rem;
+}
+section.contact .card-wrapper .card h1{
+    font-weight:400;
+    margin-bottom:1rem;
+}
+section.contact .card-wrapper .card h6{
+    font-size:1rem;
+    color:var(--ternary);
+    font-weight:400;
+    margin-bottom:4rem;
+}
+
+section.contact .input-wrap{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2rem;
+    margin-bottom:2rem;
+}
+section.contact .input-wrap-2{
+    display: flex;
+    flex-direction: column;
+}
+section.contact .input-wrap-2 input{
+    margin-bottom:2rem;
+}
+section.contact input{
+    padding:0.5rem;
+    border:1px solid var(--light);
+    font-size: 0.9rem;
+}
+section.contact .input-wrap-2 textarea{
+    padding:0.5rem;
+    border:1px solid var(--light);
+    font-size: 0.9rem;
+}
+section.contact .input-wrap-2 textarea:focus, section.contact input:focus{
+    outline:none;  
+}
+section.contact .btn-wrapper{
+    text-align: center;
+    margin-top:2rem;
+}
+/* footer*/
+footer{
+    background:var(--dark);
+    text-align: center;
+    padding:5rem 0;
+}
+footer .footer-logo{
+    margin-bottom:3rem;
+    width:150px;
+}
+footer .footer-socials i{
+    background:var(--light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    margin-right:0.6rem;
+    transition: all .3s ease;
+}
+footer .footer-socials i:hover{
+    background:var(--primary);
+}
+footer .footer-socials{
+    margin-bottom:3rem;
+    margin-right:-1rem;
+    display: flex;
+    justify-content: center;
+}
+footer .copyright{
+    color:var(--ternary);
+}
+.site-main-wrapper{
+    position:relative;
+}
+.hamberger{
+    position:absolute;
+    top:40px;
+    right:40px;
+    z-index:11;
+    background:none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    display:none;
+}
+.hamberger img{
+    width:30px;
+}
+
+.mobile-nav{
+   position: fixed;
+   top:0;
+   left:0;
+   z-index:1001;
+   background:var(--light);
+   width:100%;
+   height:100%;
+   padding:2rem;
+   padding-top:5rem;
+   transform: translateX(-100%);
+   -webkit-transform: translateX(-100%);
+   -moz-transform: translateX(-100%);
+   -ms-transform: translateX(-100%);
+   -o-transform: translateX(-100%);
+   transition:all .5s ease-in-out;
+   -webkit-transition:all .5s ease-in-out;
+   -moz-transition:all .5s ease-in-out;
+   -ms-transition:all .5s ease-in-out;
+   -o-transition:all .5s ease-in-out;
+}
+
+.times{
+   position:fixed;
+   top:30px;
+   right:30px;
+   border: none;
+   background:none;
+   outline:none;
+   cursor: pointer; 
+}
+.times img{
+    width:30px;
+}
+
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    color:var(--secondary);
+    text-decoration:none;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.flex{
+    display:flex;
+}
+.items-center{
+    align-items:center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    padding:0.8rem 3rem;
+    font-size:1rem;
+    font-weight:600;
+    border:2px solid transparent;
+    outline:none;
+    cursor:pointer;
+    text-transform: uppercase;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+.btn-primary{
+    background:var(--primary);
+    color:var(--secondary);
+}
+.btn-primary:hover{
+    background:transparent;
+    border-color: var(--primary);
+    color:var(--primary);
+}
+.btn-secondary{
+    background:transparent;
+    color:var(--primary);
+    border-color:var(--primary);
+}
+.btn-secondary:hover{
+    background:var(--primary);
+    color:var(--secondary);
+}
+.flex-1{
+    flex:1;
+}
+.justify-center{
+    justify-content: center;
+}
+</style>
+    <body>
+        <!---Main-banner-->
+        <div class="site-main-wrapper">
+            <button class="hamberger">
+                <img src="hamberger.svg" alt>
+            </button>
+            <!---Main-banner-end-->
+            <!---Nav-bar-->
+            <div class="mobile-nav">
+                <button class="times"><img src="times.svg"
+                        alt></button>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <header>
+                <!---Nav-bar-end-->
+                <!---Main-nav-bar-->
+                <div class="container">
+                    <nav id="main-nav"
+                        class="flex items-center justify-between">
+                        <div class="left flex items-center">
+                            <div class="branding">
+                                <img src="./images/logo.svg" alt>
+                            </div>
+                            <div>
+                                <a href="#">Home</a>
+                                <a href="#about">About</a>
+                                <a href="#services">Services</a>
+                                <a href="#work">Work</a>
+                                <a href="#blog">Blog</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <button onclick="document.location='#link'"
+                                class="btn btn-primary">Contact</button>
+                        </div>
+                    </nav>
+                    <!---Main-nav-bar-end-->
+                    <!---Intro-->
+                    <div class="hero flex items-center justify-between">
+                        <div class="left flex-1 flex justify-center">
+                            <img src="./images/man.png" alt>
+                        </div>
+                        <div class="right flex-1">
+                            <h6>SIKANDER SOHAIL</h6>
+                            <h1>I’m a SOFTWARE <span>ENGINEER</span></h1>
+                            <p>A software engineer designs, develops, tests, and
+                                maintains software systems or applications. They
+                                use programming languages, frameworks, and tools
+                                to solve problems and build software that meets
+                                specific needs. Their work may include
+                                everything from writing code to debugging and
+                                improving performance, often collaborating with
+                                other teams to ensure the software is
+                                user-friendly, reliable, and efficient.</p>
+                            <div>
+                                <button class="btn btn-secondary">DOWNLOAD
+                                    CV</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!---Intro-end-->
+                </div>
+            </header>
+            <!---About-->
+            <section id="about" class="about">
+                <div class="container flex items-center about-inner-wrap">
+                    <div class="flex-1">
+                        <img class="about-me-img"
+                            src="images/DALL·E 2025-01-26 14.23.56 - A flat-lay image of a creative designer's workspace with a sleek laptop, a graphic tablet with a stylus, a sketchbook with doodles, colorful pens, mar.png"
+                            alt>
+                    </div>
+                    <div class="flex-1 right">
+                        <h1>ABOUT <span>ME</span></h1>
+                        <h3>HELLO! I’m SIKANDER SOHAIL.</h3>
+                        <p>We are a team of dedicated software engineers
+                            committed to crafting innovative, efficient, and
+                            scalable solutions. With a deep understanding of
+                            programming languages and development frameworks, we
+                            design and build high-quality software that solves
+                            complex problems. By staying up to date with the
+                            latest technology trends, we strive to continuously
+                            improve our skills and deliver cutting-edge products
+                            that meet the needs of our users and clients.</p>
+                        <div class="social">
+                            <a href="https://www.facebook.com/login/"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://x.com/?lang=en"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!---About-end-->
+            <!---Services-->
+            <section id="services" class="services">
+                <div class="container">
+                    <h1 class="section-heading"><span>OUR </span>SERVICES</h1>
+                    <p>WE PROVIDE HIGH STANDARD CLEAN WEBSITE FOR YOUR BUSINESS
+                        SOLUTIONS</p>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <img src="./images/brush.svg" alt>
+                            <h2>SOFTWARE DEVELOPMENT</h2>
+                            <p>There are many variations of passages of but the
+                                majority have suffered alteration in some
+                                form.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/code.svg" alt>
+                            <h2>WEB DESIGN</h2>
+                            <p>There are many variations of passages of but the
+                                majority have suffered alteration in some
+                                form.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/bag.svg" alt>
+                            <h2>MOBILE APPLICATION DEVELOPMENT</h2>
+                            <p>There are many variations of passages of but the
+                                majority have suffered alteration in some
+                                form.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/desktop.svg" alt>
+                            <h2>WEB DEVELOPMENT </h2>
+                            <p>There are many variations of passages of but the
+                                majority have suffered alteration in some
+                                form.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/media.svg" alt>
+                            <h2>SYSTEM ARCHITECTURE DESIGN </h2>
+                            <p>There are many variations of passages of but the
+                                majority have suffered alteration in some
+                                form.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <img src="./images/phone.svg" alt>
+                            <h2>DATABASE MANAGEMENT AND OPTIMIZATION </h2>
+                            <p>There are many variations of passages of but the
+                                majority have suffered alteration in some
+                                form.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!---Services-end-->
+            <!---Freelancer-->
+            <section class="freelancer">
+                <h1>I AM AVAILABLE FOR FREELANCER.</h1>
+                <p>WE PROVIDE HIGH STANDARD CLEAN WEBSITE FOR YOUR BUSINESS
+                    SOLUTIONS.</p>
+                <button class="btn btn-primary">Download CV</button>
+            </section>
+
+            <section id="work" class="work">
+                <div class="container">
+                    <h1 class="section-heading"><span>OUR</span> WORKS</h1>
+                    <p>WE PROVIDE HIGH STANDARD CLEAN WEBSITE FOR YOUR BUSINESS
+                        SOLUTIONS.</p>
+
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="overlay">
+                                <span>CATEGORY</span>
+                                <a href="#">SOFTWARE DEVELOPMENT</a>
+                            </div>
+                            <img
+                                src="images/screencapture-file-C-Users-zz-traders-Desktop-code-web-assigment-CONTACT-HTML-2025-01-19-16_14_50.png"
+                                alt>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <span>CATEGORY</span>
+                                <a href="#">WEB DESIGN</a>
+                            </div>
+                            <img
+                                src="images/screencapture-file-C-Users-zz-traders-Desktop-code-web-assigment-MAN-HTML-2025-01-19-16_12_23.png"
+                                alt>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <span>CATEGORY</span>
+                                <a href="#">MOBILE APPLICATION DEVELOPMENT</a>
+                            </div>
+                            <img
+                                src="images/screencapture-file-C-Users-zz-traders-Desktop-code-web-assigment-index-html-2025-01-19-16_18_05.png"
+                                alt>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <span>CATEGORY</span>
+                                <a href="#">WEB DEVELOPMENT</a>
+                            </div>
+                            <img
+                                src="images/screencapture-file-C-Users-zz-traders-Desktop-code-web-assigment-WOMEN-HTML-2025-01-19-16_17_44.png"
+                                alt>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <span>CATEGORY</span>
+                                <a href="#">SYSTEM ARCHITECTURE DESIGN</a>
+                            </div>
+                            <img
+                                src="images/screencapture-file-C-Users-zz-traders-Desktop-ao-index-html-2025-01-19-16_27_18.png"
+                                alt>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <span>CATEGORY</span>
+                                <a href="#">DATABASE MANAGEMENT AND
+                                    OPTIMIZATION</a>
+                            </div>
+                            <img src="./images/ph-1.png" alt>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!---Freelancer-end-->
+            <!---Blog-->
+            <section id="blog" class="blog">
+                <div class="container">
+                    <h1 class="section-heading"><span>OUR</span> BLOG</h1>
+                    <p>WE PROVIDE HIGH STANDARD CLEAN WEBSITE FOR YOUR BUSINESS
+                        SOLUTIONS.</p>
+
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="./images/article-ph-1.png" alt>
+                            </div>
+                            <div class="card-content">
+                                <a href="#">
+                                    <h1>A DAY IN THE LIFE OF A SOFTWARE
+                                        ENGINEER: WHAT TO EXPECT</h1>
+                                </a>
+                                <span>JUNE 19, 2017</span>
+                                <p>This blog could provide an inside look at the
+                                    daily responsibilities of a software
+                                    engineer, including coding, debugging,
+                                    meetings, and team collaboration. It could
+                                    also touch on the skills needed, such as
+                                    problem-solving and communication, and
+                                    discuss the challenges and rewards of the
+                                    profession.
+                                </p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="./images/article-ph-1.png" alt>
+                            </div>
+                            <div class="card-content">
+                                <a href="#">
+                                    <h1>TOP 5 PROGRAMMING LANGUAGES EVERY
+                                        SOFTWARE ENGINEER SHOULD LEARN IN
+                                        2025</h1>
+                                </a>
+                                <span>MAY 12, 2017</span>
+                                <p>This post could dive into the most relevant
+                                    and in-demand programming languages for
+                                    software engineers, helping readers
+                                    understand which languages will give them
+                                    the best career prospects. It might discuss
+                                    the benefits of learning languages like
+                                    Python, JavaScript, or Rust, and how they
+                                    apply to modern software development.</p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="./images/article-ph-1.png" alt>
+                            </div>
+                            <div class="card-content">
+                                <a href="#">
+                                    <h1>HOW TO TRANSITION FROM JUNIOR TO SENIOR
+                                        SOFTWARE ENGINEER</h1>
+                                </a>
+                                <span>APRIL 29, 2017</span>
+                                <p>This blog would guide readers on the path
+                                    from being a junior developer to a senior
+                                    software engineer. Topics could include
+                                    gaining expertise in software design
+                                    patterns, enhancing leadership and mentoring
+                                    skills, and managing larger projects. It
+                                    might also offer tips on networking and
+                                    keeping up with new technologies to stay
+                                    competitive in the field.
+                                </p>
+                                <a href="#">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!---Blog-end-->
+            <!---Contact-->
+            <section class="contact">
+                <div class="container">
+                    <h1 class="section-heading">CONTACT <span>US</span></h1>
+                    <p>WE PROVIDE HIGH STANDARD CLEAN WEBSITE FOR YOUR BUSINESS
+                        SOLUTIONS.</p>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <img src="./images/phone-2.svg" alt>
+                            <h1>CALL US ON</h1>
+                            <h6>0336-2826511</h6>
+                        </div>
+                        <div class="card">
+                            <img src="./images/msg.svg" alt>
+                            <h1>EMAIL US AT</h1>
+                            <h6>sikandar2406a@aptechgdn.net</h6>
+                        </div>
+                        <div class="card">
+                            <img src="./images/map.svg" alt>
+                            <h1>VISIT OFFICE</h1>
+                            <h6>APTECH GARDEN KARACHI PAKISTAN</h6>
+                        </div>
+                    </div>
+                    <form action>
+                        <div id="link" class="input-wrap">
+                            <input type="text" placeholder="YOUR NAME"
+                                id="name">
+                            <input type="email" placeholder="YOUR EMAIL"
+                                id="email">
+                        </div>
+                        <div class="input-wrap-2">
+                            <input type="text" placeholder="YOUR SUBJECT"
+                                id="Subject">
+                            <textarea name id cols="30" rows="10"
+                                placeholder="YOUR MESSAGE"
+                                id="msg"></textarea>
+                        </div>
+                        <div class="btn-wrapper">
+                            <button class="btn btn-primary" id="sub">SEND
+                                MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    
+                </script>
+            </section>
+            <!---Contact-end-->
+            <!---Footer-->
+            <footer>
+                <img class="footer-logo" src="./images/logo-2.svg" alt>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://about.gitlab.com/"><i class="fa-brands fa-gitlab"></i></a>
+                </div>
+                <div class="copyright">
+                    Copyright 2020 © Coder's
+                </div>
+            </footer>
+            <!---Footer-end-->
+        </div>
+    </body>
+    <script src="java.js"></script>
+</html>
